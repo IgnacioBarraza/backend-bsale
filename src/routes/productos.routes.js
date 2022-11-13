@@ -3,7 +3,7 @@ import { getProductos, getProducto } from "../controllers/productos.controller.j
 
 const router = Router()
 
-router.get('/category/product', getProductos)
-router.get('/category/product/:id', getProducto)
+router.get('/product', getProductos)
+router.get('/product/:id', getProducto)
 
 export default router
