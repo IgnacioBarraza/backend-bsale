@@ -4,8 +4,14 @@ import categoryRoutes from "./routes/category.routes.js";
 
 const app = express()
 
-app.use(express.json())
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "https://backend-bsale-production-992a.up.railway.app/")
+    res.header("Access-Control-Allow-Header", "Origin, X-Requested-With, Content-Type, Accept")
+    next()
+})
 
+
+app.use(express.json())
 app.use(productsRoutes)
 app.use(categoryRoutes)
 
