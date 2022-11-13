@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { ping } from "../controllers/category.controlle.js";
-
+import { getCategories, getCategory } from "../controllers/category.controlle.js";
 
 const router = Router()
 
-router.get('/ping', ping)
+router.get('/category', getCategories)
+router.get('/category/:category', getCategory)
 
 export default router
