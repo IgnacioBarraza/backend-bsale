@@ -4,11 +4,11 @@ import categoryRoutes from "./routes/category.routes.js";
 
 const app = express()
 
-// app.use(function(req, res, next) {
-//     res.header("Access-Control-Allow-Origin", "https://backend-bsale-production-992a.up.railway.app/categories")
-//     res.header("Access-Control-Allow-Header", "Origin, X-Requested-With, Content-Type, Accept")
-//     next()
-// })
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*")
+    res.header("Access-Control-Allow-Header", "Origin, X-Requested-With, Content-Type, Accept")
+    next()
+})
 
 // // app.get('/', function(req, res))
 
