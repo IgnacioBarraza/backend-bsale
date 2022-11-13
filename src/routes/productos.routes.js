@@ -4,6 +4,6 @@ import { getProductos, getProducto } from "../controllers/productos.controller.j
 const router = Router()
 
 router.get('/product', getProductos)
-router.get('/product/:id', getProducto)
+router.get('/product/:category', getProducto)
 
 export default router
