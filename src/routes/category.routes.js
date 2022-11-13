@@ -4,6 +4,6 @@ import { getCategories, getCategory } from "../controllers/category.controller.j
 const router = Router()
 
 router.get('/categories', getCategories)
-router.get('/categories/:category', getCategory)
+router.get('/categories/:name', getCategory)
 
 export default router
