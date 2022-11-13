@@ -3,7 +3,7 @@ import { getCategories, getCategory } from "../controllers/category.controller.j
 
 const router = Router()
 
-router.get('/categories', getCategories)
-router.get('/categories/:name', getCategory)
+router.get('/category', getCategories)
+router.get('/category/:name', getCategory)
 
 export default router
