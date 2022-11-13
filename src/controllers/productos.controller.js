@@ -25,3 +25,17 @@ export const getProducto = async (req, res) => {
         })
     }
 }
+
+export const getProductoUrl = async (req, res) => {
+    try {
+        const [rows] = await pool.query('SELECT * FROM product WHERE url_image = ?', [req.params.url_image])
+        if (rows.length <= 0) return res.status(404).json({
+            message: 'Imagen no encontrada'
+        })
+        res.json(rows)
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Algo salio mal'
+        })
+    }
+}
